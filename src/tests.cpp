@@ -49,10 +49,26 @@ TEST_CASE("TASK B TESTS") {
   for (int n = 0; n < v12.size();n++) {
     CHECK(v12[n]==arr2[n]);
   }
-
 }
 
 TEST_CASE("TASK C TESTS") {
+  std::vector<int> v13{1,2,3};
+  std::vector<int> v14{4,5};
+  int arr3[] = {1,2,3,4,5};
+  gogeta(v13, v14); // v1 is now [1,2,3,4,5] and v2 is empty.
+  std::vector<int> v15{1,53,62,124};
+  std::vector<int> v16{0,123,62,-1};
+  int arr4[] = {0,123,62,-1,1,53,62,124};
+  gogeta(v16, v15);
+
+  for (int n = 0; n < v13.size();n++) {
+    CHECK(v13[n]==arr3[n]);
+  }
+  CHECK(v14.empty());
+  for (int o = 0; o < v16.size();o++) {
+    CHECK(v16[o]==arr4[o]);
+  }
+  CHECK(v15.empty());
 
 }
 

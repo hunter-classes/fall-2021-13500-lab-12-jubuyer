@@ -6,3 +6,11 @@
 TEST_CASE("TASK A TESTS") {
 
 }
+
+TEST_CASE("TASK B TESTS") {
+
+}
+
+TEST_CASE("TASK C TESTS") {
+
+}

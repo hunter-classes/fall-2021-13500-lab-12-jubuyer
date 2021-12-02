@@ -6,8 +6,8 @@
 
 * GitHub username: jubuyer
 
-* Notes: ~.cpp~ and ~.h~ files are in src directory, executables build to the
-root directory
+* Notes:
+~.cpp~ and ~.h~ files are in src directory, executables build to the root directory
 
 
 * General instructions:

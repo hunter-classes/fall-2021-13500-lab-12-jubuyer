@@ -4,6 +4,7 @@
 #include "vectors.h"
 #include "optimism.h"
 #include "fusion.h"
+#include "pairwise.h"
 
 int main(int argc, char const *argv[]) {
   //Task A
@@ -41,6 +42,14 @@ int main(int argc, char const *argv[]) {
 
   //Task D
   std::cout << "\n\x1B[31mTests for pairwise [TASK D]\n\033[0m";
+  std::vector<int> v3{1,2,3};
+  std::vector<int> v4{4,5};
 
+  std::vector<int> v5 = sumPairWise(v3, v4); // returns [5, 7, 3]
+
+  for(int n = 0; n < v5.size(); n++) {
+    std::cout << v5[n] << '\t';
+  }
+  std::cout << '\n';
 	return 0;
 }

@@ -1,4 +1,6 @@
 #recipes
+VPATH = src
+SDIR = src
 CC = g++
 CFLAGS  = -std=c++11 -Wall
 
@@ -20,13 +22,13 @@ fusion.o: fusion.cpp
 pairwise.o: pairwise.cpp
 	$(CC) $(CFLAGS) -c $^
 
-tests.o: tests.cpp
-	$(CC) $(CFLAGS) -c $^
+tests.o: tests.cpp doctest.h
+	$(CC) $(CFLAGS) -c $<
 
 main.o: main.cpp
-	$(CC) $(CFLAGS) -c $^
+	$(CC) $(CFLAGS) -o $(SDIR)/$@ -c $^
 
 .PHONY: clean
 
 clean:
-	rm -f *o main tests a.out
+	rm -f src/*o ./*o main tests a.out

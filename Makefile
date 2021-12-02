@@ -26,9 +26,9 @@ tests.o: tests.cpp doctest.h
 	$(CC) $(CFLAGS) -c $<
 
 main.o: main.cpp
-	$(CC) $(CFLAGS) -o $(SDIR)/$@ -c $^
+	$(CC) $(CFLAGS) -c $^
 
 .PHONY: clean
 
 clean:
-	rm -f src/*o ./*o main tests a.out
+	rm -f *o src/*o main tests a.out

@@ -73,5 +73,30 @@ TEST_CASE("TASK C TESTS") {
 }
 
 TEST_CASE("TASK D TESTS") {
+  std::vector<int> v17{1,2,3};
+  std::vector<int> v18{4,5};
+  std::vector<int> v19 = sumPairWise(v17, v18); // returns [5, 7, 3]
+  int arr5[] = {5,7,3};
 
+  for(int p = 0; p < v19.size(); p++) {
+    CHECK(v19[p]==arr5[p]);
+  }
+
+  std::vector<int> v20{-1,2,3,1293,-4,-6,12,-12};
+  std::vector<int> v21{4,63,25,-1290};
+  std::vector<int> v22 = sumPairWise(v20, v21);
+  int arr6[] = {3,65,28,3,-4,-6,12,-12};
+
+  for(int q = 0; q < v22.size(); q++) {
+    CHECK(v22[q]==arr6[q]);
+  }
+
+  std::vector<int> v23{-1,2,-4,-6,12,-12,2113};
+  std::vector<int> v24{4,63,25,-1290,3,1293};
+  std::vector<int> v25 = sumPairWise(v23, v24);
+  int arr7[] = {3,65,21,-1296,15,1281,2113};
+
+  for(int r = 0; r < v25.size(); r++) {
+    CHECK(v25[r]==arr7[r]);
+  }
 }

@@ -12,10 +12,12 @@ int main(int argc, char const *argv[]) {
   std::vector<int> vect1 = makeVector(5);
   std::vector<int> vect2 = makeVector(-5);
 
+  std::cout << "First Vector:" << '\n';
   for(int i = 0; i < vect1.size(); i++) {
     std::cout << vect1[i] << '\t';
   }
   std::cout << "\n";
+  std::cout << "Example of makeVector with negative parameter:" << '\n';
   for(int j = 0; j < vect2.size(); j++) {
     std::cout << vect2[j] << '\t';
   }
@@ -23,6 +25,7 @@ int main(int argc, char const *argv[]) {
  	std::cout << "\n\x1B[31mTest for optimism [TASK B]\n\033[0m";
   std::vector<int> vect3 {1,2,-1,3,4,-1,6};
   std::vector<int> vect4 (goodVibes(vect3)); // returns [1,2,3,4,6]
+  std::cout << "Calling goodVibes()" << '\n';
   for(int k = 0; k < vect4.size(); k++) {
     std::cout << vect4[k] << '\t';
   }
@@ -33,6 +36,7 @@ int main(int argc, char const *argv[]) {
 
   gogeta(v1, v2); // v1 is now [1,2,3,4,5] and v2 is empty.
 
+  std::cout << "Calling gogeta()" << '\n';
   for(int l = 0; l < v1.size(); l++) {
     std::cout << v1[l] << '\t';
   }
@@ -47,6 +51,7 @@ int main(int argc, char const *argv[]) {
 
   std::vector<int> v5 = sumPairWise(v3, v4); // returns [5, 7, 3]
 
+  std::cout << "Calling sumPairWise()" << '\n';
   for(int n = 0; n < v5.size(); n++) {
     std::cout << v5[n] << '\t';
   }

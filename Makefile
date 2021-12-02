@@ -2,16 +2,19 @@
 CC = g++
 CFLAGS  = -std=c++11 -Wall
 
-main: main.o vectors.o optimism.o
+main: main.o vectors.o optimism.o fusion.o
 	$(CC) $(CFLAGS) -o $@ $^
 
-tests: tests.o vectors.o optimism.o
+tests: tests.o vectors.o optimism.o fusion.o
 	$(CC) $(CFLAGS) -o $@ $^
 
 vectors.o: vectors.cpp
 	$(CC) $(CFLAGS) -c $^
 
 optimism.o: optimism.cpp
+	$(CC) $(CFLAGS) -c $^
+
+fusion.o: fusion.cpp
 	$(CC) $(CFLAGS) -c $^
 
 tests.o: tests.cpp

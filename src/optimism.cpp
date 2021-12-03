@@ -5,7 +5,8 @@
 
 std::vector<int> goodVibes(const std::vector<int>&v) {
   std::vector<int> vect;
-  for(int i = 0; i < v.size(); i++) {
+  int vectSize = v.size();
+  for(int i = 0; i < vectSize; i++) {
     if(v[i] > 0) {
       vect.push_back (v[i]);
     }

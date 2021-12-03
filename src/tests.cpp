@@ -13,10 +13,12 @@ TEST_CASE("TASK A TESTS") {
     std::vector<int> v3 = makeVector(10);
     std::vector<int> v4{0,1,2,3,4,5,6,7,8,9};
 
-    for (int i = 0;i < v1.size();i++) {
+    int size1 = v1.size();
+    for (int i = 0;i < size1;i++) {
       CHECK(v1[i]==v2[i]);
     }
-    for (int j = 0; j < v3.size();j++) {
+    int size2 = v3.size();
+    for (int j = 0; j < size2;j++) {
       CHECK(v3[j]==v4[j]);
     }
   }
@@ -26,10 +28,12 @@ TEST_CASE("TASK A TESTS") {
     std::vector<int> v7= makeVector(-10124123);
     std::vector<int> v8{0};
 
-    for (int k = 0;k < v5.size();k++) {
+    int size3 = v5.size();
+    for (int k = 0;k < size3;k++) {
       CHECK(v5[k]==v6[k]);
     }
-    for (int l = 0; l < v7.size();l++) {
+    int size4 = v7.size();
+    for (int l = 0; l < size4;l++) {
       CHECK(v7[l]==v8[l]);
     }
   }
@@ -43,10 +47,12 @@ TEST_CASE("TASK B TESTS") {
   std::vector<int> v12 (goodVibes(v11)); // returns [52,2,3,1232,4,6,4]
   int arr2[] = {52,2,3,1232,4,6,4};
 
-  for (int m = 0;m < v10.size();m++) {
+  int size5 = v10.size();
+  for (int m = 0;m < size5;m++) {
     CHECK(v10[m]==arr1[m]);
   }
-  for (int n = 0; n < v12.size();n++) {
+  int size6 = v12.size();
+  for (int n = 0; n < size6;n++) {
     CHECK(v12[n]==arr2[n]);
   }
 }
@@ -61,11 +67,13 @@ TEST_CASE("TASK C TESTS") {
   int arr4[] = {0,123,62,-1,1,53,62,124};
   gogeta(v16, v15);
 
-  for (int n = 0; n < v13.size();n++) {
+  int size7 = v13.size();
+  for (int n = 0; n < size7;n++) {
     CHECK(v13[n]==arr3[n]);
   }
   CHECK(v14.empty());
-  for (int o = 0; o < v16.size();o++) {
+  int size8 = v16.size();
+  for (int o = 0; o < size8;o++) {
     CHECK(v16[o]==arr4[o]);
   }
   CHECK(v15.empty());
@@ -78,7 +86,8 @@ TEST_CASE("TASK D TESTS") {
   std::vector<int> v19 = sumPairWise(v17, v18); // returns [5, 7, 3]
   int arr5[] = {5,7,3};
 
-  for(int p = 0; p < v19.size(); p++) {
+  int size9 = v19.size();
+  for(int p = 0; p < size9; p++) {
     CHECK(v19[p]==arr5[p]);
   }
 
@@ -87,7 +96,8 @@ TEST_CASE("TASK D TESTS") {
   std::vector<int> v22 = sumPairWise(v20, v21);
   int arr6[] = {3,65,28,3,-4,-6,12,-12};
 
-  for(int q = 0; q < v22.size(); q++) {
+  int size10 = v22.size();
+  for(int q = 0; q < size10; q++) {
     CHECK(v22[q]==arr6[q]);
   }
 
@@ -96,7 +106,8 @@ TEST_CASE("TASK D TESTS") {
   std::vector<int> v25 = sumPairWise(v23, v24);
   int arr7[] = {3,65,21,-1296,15,1281,2113};
 
-  for(int r = 0; r < v25.size(); r++) {
+  int size11 = v25.size();
+  for(int r = 0; r < size11; r++) {
     CHECK(v25[r]==arr7[r]);
   }
 }
